@@ -33,6 +33,7 @@
                     <li><a href="mailto:abhinendra10@gmail.com" target="_top"><img src="./Abhinendra Yadav_files/emailLight.svg"></a></li>
                 </ul>
             </div>
+          
            <!-- <figure id="selfContainer">
                 <img id="self" src="./Abhinendra Yadav_files/merishakal.jpg">
                 <figcaption>*Me in a totally candid, unstaged pose.</figcaption>
@@ -52,6 +53,7 @@
                     I'm also the <span class="important">founder of
                         <a href="https://greedygeekx.wordpress.com" target="_blank">GreedyGeekX</a></span>, a blog that talks about tech. <br>
                         Aur mai udega.
+                        <span id="time"></span>
                 </p>
             </div>
             <h3 id="copyright">Copyright © Abhinendra Yadav</h3>
@@ -69,7 +71,18 @@
                 const age = (currentdate.getTime() - birthdate.getTime()) / (1000 * 3600 * 24 * 365);
                 const actualage = Math.floor(age);
                 document.getElementById('age').innerText = `${actualage}`;
+                display_ct();
+               
             };
+            fucntion display_ct(){
+                var today = new Date();
+                document.getElementById('time').innerHTML = today;
+                display_c();
+            }
+            function display_c(){
+                var refresh=1000; // Refresh rate in milli seconds
+                mytime=setTimeout('display_ct()',refresh)
+            }
         </script>
     
     
