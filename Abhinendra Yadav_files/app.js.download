@@ -52,7 +52,7 @@ particlesJS('particles-js',
         "distance": 100,
         // "color": "#a0285e",
 				// "color": "#6715a5",
-				"color": "#02203C",
+				"color": "#707070",
         "opacity": 1,
         "width": 1
       },
