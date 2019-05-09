@@ -71,18 +71,11 @@
                 const age = (currentdate.getTime() - birthdate.getTime()) / (1000 * 3600 * 24 * 365);
                 const actualage = Math.floor(age);
                 document.getElementById('age').innerText = `${actualage}`;
-                display_ct();
-               
-            };
-            fucntion display_ct(){
                 var today = new Date();
-                document.getElementById('time').innerHTML = today;
-                display_c();
+                document.getElementById('time').innerText = today;
+               
             }
-            function display_c(){
-                var refresh=1000; // Refresh rate in milli seconds
-                mytime=setTimeout('display_ct()',refresh)
-            }
+           
         </script>
     
     
