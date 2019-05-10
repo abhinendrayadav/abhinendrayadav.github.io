@@ -1,5 +1,5 @@
 
-<html style="background-color: rgba(19, 16, 16, 0.377); transition: background-color 0.55s ease 0s;">
+<html style="background-color: rgba(0, 0, 0, 0.377); transition: background-color 0.55s ease 0s;">
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -33,10 +33,21 @@
                     <li><a href="mailto:abhinendra10@gmail.com" target="_top"><img src="./Abhinendra Yadav_files/emailLight.svg"></a></li>
                 </ul>
             </div>
+
+            <div id="discordWidget">
+                   <!-- <iframe src="https://discordapp.com/widget?id=539685842005000226&theme=dark" width="250" height="350" allowtransparency="true" frameborder="0"></iframe>
+                   -->
+                   <iframe src="https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF" width="250" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
             
             <div id ="timeClock">
                     <!--<p> hello there this is a test text.</p>-->
                     <span id="time"></span>
+                </div>
+                <div id = "dateCalender">
+                        <span id="date"></span>
+                        
+                    
                 </div>
 
             <!--<figure id="selfContainer">
@@ -87,14 +98,47 @@
                 var h = today.getHours();
                 var m = today.getMinutes();
                 var s = today.getSeconds();
+                var dateNumber = today.getDate();
+                var month = today.getMonth();
+                var day = today.getDay();
+
                 m = checkTime(m);
                 s = checkTime(s);
+
+                month = checkMonth(month);
+                day = checkDay(day);
                 document.getElementById('time').innerHTML = h +":" + m + ":" + s;
+                document.getElementById('date').innerHTML = day + ", " + dateNumber + " " + month;
                 var t = setTimeout(displayTime, 500);
             }
             function checkTime(i){
                 if(i<10){i="0"+1};
                 return i;
+            }
+            function checkMonth(n){
+                if(n==0){n="January"};
+                if(n==1){n="February"};
+                if(n==2){n="March"};
+                if(n==3){n="April"};
+                if(n==4){n="May"};
+                if(n==5){n="June"};
+                if(n==6){n="July"};
+                if(n==7){n="August"};
+                if(n==8){n="September"};
+                if(n==9){n="October"};
+                if(n==10){n="November"};
+                if(n==11){n="December"};
+                return n;
+            }
+            function checkDay(n){
+                if(n==1){n="Mon"};
+                if(n==2){n="Tue"};
+                if(n==3){n="Wed"};
+                if(n==4){n="Thur"};
+                if(n==5){n="Fri"};
+                if(n==6){n="Sat"};
+                if(n==7){n="Sun"};
+                return n;
             }
         </script>
     

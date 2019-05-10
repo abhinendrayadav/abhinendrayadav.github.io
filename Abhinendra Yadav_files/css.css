@@ -35,7 +35,7 @@ p {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #1f1f1f;
+  background-color: #141414;
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
@@ -135,14 +135,30 @@ ul > li > a > img:hover {
   left: 12%;
 }
 
+#discordWidget{
+  position: absolute;
+  z-index: 1;
+  top: 25%;
+  left: 12.5%;
+
+}
+
 #timeClock{
   position: absolute;
   z-index: 1;
-  top: 60%;
+  top: 65%;
   left: 12%;
   font-size: 60px;
   font-family: fantasy;
 
+}
+
+#dateCalender{
+  position: absolute;
+  z-index: 1;
+  top: 72%;
+  left: 14%;
+  font-size: 30px;
 }
 
 #self {
