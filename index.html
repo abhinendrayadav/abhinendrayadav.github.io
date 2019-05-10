@@ -33,8 +33,13 @@
                     <li><a href="mailto:abhinendra10@gmail.com" target="_top"><img src="./Abhinendra Yadav_files/emailLight.svg"></a></li>
                 </ul>
             </div>
-          
-           <!-- <figure id="selfContainer">
+            
+            <div id ="timeClock">
+                    <!--<p> hello there this is a test text.</p>-->
+                    <span id="time"></span>
+                </div>
+
+            <!--<figure id="selfContainer">
                 <img id="self" src="./Abhinendra Yadav_files/merishakal.jpg">
                 <figcaption>*Me in a totally candid, unstaged pose.</figcaption>
             </figure>-->
@@ -53,7 +58,7 @@
                     I'm also the <span class="important">founder of
                         <a href="https://greedygeekx.wordpress.com" target="_blank">GreedyGeekX</a></span>, a blog that talks about tech. <br>
                         Aur mai udega.
-                        <span id="time"></span>
+                        
                 </p>
             </div>
             <h3 id="copyright">Copyright © Abhinendra Yadav</h3>
@@ -71,11 +76,26 @@
                 const age = (currentdate.getTime() - birthdate.getTime()) / (1000 * 3600 * 24 * 365);
                 const actualage = Math.floor(age);
                 document.getElementById('age').innerText = `${actualage}`;
-                var today = new Date();
-                document.getElementById('time').innerText = today;
-               
+                displayTime();
             }
+            
            
+        </script>
+        <script>
+            function displayTime(){
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('time').innerHTML = h +":" + m + ":" + s;
+                var t = setTimeout(displayTime, 500);
+            }
+            function checkTime(i){
+                if(i<10){i="0"+1};
+                return i;
+            }
         </script>
     
     

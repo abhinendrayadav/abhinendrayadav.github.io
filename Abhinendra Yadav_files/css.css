@@ -131,8 +131,18 @@ ul > li > a > img:hover {
 #selfContainer {
   position: absolute;
   z-index: 1;
-  top: 20%;
+  top: 60%;
   left: 12%;
+}
+
+#timeClock{
+  position: absolute;
+  z-index: 1;
+  top: 60%;
+  left: 12%;
+  font-size: 60px;
+  font-family: fantasy;
+
 }
 
 #self {
