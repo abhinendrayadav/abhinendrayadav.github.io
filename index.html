@@ -87,13 +87,13 @@
                 const age = (currentdate.getTime() - birthdate.getTime()) / (1000 * 3600 * 24 * 365);
                 const actualage = Math.floor(age);
                 document.getElementById('age').innerText = `${actualage}`;
-                displayTime();
+                displayDateTime();
             }
             
            
         </script>
         <script>
-            function displayTime(){
+            function displayDateTime(){
                 var today = new Date();
                 var h = today.getHours();
                 var m = today.getMinutes();
@@ -109,7 +109,7 @@
                 day = checkDay(day);
                 document.getElementById('time').innerHTML = h +":" + m + ":" + s;
                 document.getElementById('date').innerHTML = day + ", " + dateNumber + " " + month;
-                var t = setTimeout(displayTime, 500);
+                var t = setTimeout(displayDateTime, 500);
             }
             function checkTime(i){
                 if(i<10){i="0"+1};
