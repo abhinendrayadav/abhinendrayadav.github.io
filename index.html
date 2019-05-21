@@ -20,10 +20,10 @@
     </head>
     
     <body>
-        <div id="particles-js"><canvas class="particles-js-canvas-el" width="1548" height="899" style="width: 100%; height: 100%;"></canvas></div>
+        <div id="particles-js"><canvas class="particles-js-canvas-el" width="100%" height="100%" style="width: 100%; height: 100%;"></canvas></div>
         <div id="main">
             <div id="greetingContainer">
-                <div id="greeting">Hello | Bonjour</div>
+                <div id="greeting">Hello | Bonjour | Good <span id="greetings"></span></div>
                 <div id="name">My name is <img id="speaker" src="./Abhinendra Yadav_files/speakerLight.svg" onclick="play()"> Abhinendra
                     Yadav</div>
                 <ul id="mainIcons">
@@ -88,6 +88,7 @@
                 const actualage = Math.floor(age);
                 document.getElementById('age').innerText = `${actualage}`;
                 displayDateTime();
+                displayGreetings();
             }
             
            
@@ -107,7 +108,7 @@
 
                 month = checkMonth(month);
                 day = checkDay(day);
-                document.getElementById('time').innerHTML = h +":" + m + ":" + s;
+                document.getElementById('time').innerHTML = h +":" + m ;
                 document.getElementById('date').innerHTML = day + ", " + dateNumber + " " + month;
                 var t = setTimeout(displayDateTime, 500);
             }
@@ -139,6 +140,16 @@
                 if(n==6){n="Sat"};
                 if(n==7){n="Sun"};
                 return n;
+            }
+            function displayGreetings(){
+                var hour = new Date().getHours();
+                var greet;
+                if(hour>1 && hour<5) greet =  "it's too late sleep now";
+                else if(hour>=5 && hour<12) greet =  "Morning";
+                else if(hour>=12 && hour<16) greet =  "Afternoon";
+                else  greet =  "Evening";
+  
+               document.getElementById('greetings').innerHTML = greet;
             }
         </script>
     

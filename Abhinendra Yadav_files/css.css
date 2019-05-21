@@ -53,8 +53,8 @@ p {
   margin: 0;
   padding: 0;
   top: 20%;
-  left: 50%;
-  width: 355px;
+  left: 43%;
+  width: 700px;
   height: 120px;
 }
 
@@ -85,13 +85,13 @@ p {
   font-size: 1.25em;
   /*font-family: Helvetica;*/
   top: 40%;
-  right: 0%;
+  right: 15%;
 }
 
 #mainIcons {
   position: absolute;
   bottom: 0%;
-  right: 3%;
+  right: 15%;
   margin: 0;
   padding: 0;
 }
@@ -147,8 +147,8 @@ ul > li > a > img:hover {
   position: absolute;
   z-index: 1;
   top: 65%;
-  left: 12%;
-  font-size: 60px;
+  left: 14%;
+  font-size: 65px;
   font-family: fantasy;
 
 }
@@ -156,9 +156,9 @@ ul > li > a > img:hover {
 #dateCalender{
   position: absolute;
   z-index: 1;
-  top: 72%;
-  left: 14%;
-  font-size: 30px;
+  top: 73%;
+  left: 15%;
+  font-size: 20px;
 }
 
 #self {
