@@ -23,7 +23,7 @@
         <div id="particles-js"><canvas class="particles-js-canvas-el" width="100%" height="100%" style="width: 100%; height: 100%;"></canvas></div>
         <div id="main">
             <div id="greetingContainer">
-                <div id="greeting">Hello | Bonjour | Good <span id="greetings"></span></div>
+                <div id="greeting">Hello | Bonjour | <span id="greetings"></span></div>
                 <div id="name">My name is <img id="speaker" src="./Abhinendra Yadav_files/speakerLight.svg" onclick="play()"> Abhinendra
                     Yadav</div>
                 <ul id="mainIcons">
@@ -145,9 +145,9 @@
                 var hour = new Date().getHours();
                 var greet;
                 if(hour>1 && hour<5) greet =  "it's too late sleep now";
-                else if(hour>=5 && hour<12) greet =  "Morning";
-                else if(hour>=12 && hour<16) greet =  "Afternoon";
-                else  greet =  "Evening";
+                else if(hour>=5 && hour<12) greet =  "Good Morning";
+                else if(hour>=12 && hour<16) greet =  "Good Afternoon";
+                else  greet =  "Good Evening";
   
                document.getElementById('greetings').innerHTML = greet;
             }
