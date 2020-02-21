@@ -141,7 +141,7 @@ function scrollToBottomOfResults() {
 function send(message) {
 
 	$.ajax({
-		url: "http://10.11.40.74:5005/webhooks/rest/webhook",
+		url: "http://79790280.ngrok.io/webhooks/rest/webhook",
 		type: "POST",
 		contentType: "application/json",
 		data: JSON.stringify({ message: message, sender: user_id }),
