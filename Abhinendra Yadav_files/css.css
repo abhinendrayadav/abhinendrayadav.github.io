@@ -36,16 +36,8 @@ p {
   width: 100%;
   height: 100%;
   background-color: #141414;
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  z-index: 0;
 }
 
-#main {
-  height: 100%;
-}
 
 #greetingContainer {
   position: absolute;
@@ -135,13 +127,21 @@ ul > li > a > img:hover {
   left: 12%;
 }
 
-#discordWidget{
+#whatsapp{
   position: absolute;
   z-index: 1;
   top: 25%;
   left: 12.5%;
+  align-items: center;
 
 }
+
+
+#sendButton{
+  position: absolute;
+  left: 20%;
+}
+
 
 #timeClock{
   position: absolute;
@@ -152,6 +152,8 @@ ul > li > a > img:hover {
   font-family: fantasy;
 
 }
+
+
 
 #dateCalender{
   position: absolute;

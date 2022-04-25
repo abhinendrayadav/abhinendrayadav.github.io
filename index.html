@@ -1,13 +1,13 @@
 
 <html style="background-color: rgba(0, 0, 0, 0.377); transition: background-color 0.55s ease 0s;">
+  
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
         <title>Abhinendra Yadav</title>
         <script src="./Abhinendra Yadav_files/particles.js.download"></script>
-        <script src="./Abhinendra Yadav_files/200e670f09e3b73afa.js.download"></script>
         <link href="./Abhinendra Yadav_files/css" rel="stylesheet">
-        <link href="./Abhinendra Yadav_files/css(1)" rel="stylesheet">
         <style>
             * {
                 font-family: 'Open Sans', sans-serif;
@@ -28,33 +28,38 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
          integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />  
 
-      <!--Import materialize.css-->
-      <link rel="stylesheet" type="text/css" href="static/css/materialize.min.css">
-
-      <!--Main css-->
-      <link rel="stylesheet" type="text/css" href="static/css/style.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <body>
         <div id="particles-js"><canvas class="particles-js-canvas-el" width="100%" height="100%" style="width: 100%; height: 100%;"></canvas></div>
-        <div id="main">
+        <!-- <div id="main"> -->
             <div id="greetingContainer">
-                <div id="greeting">Hello | Bonjour | <span id="greetings"></span></div>
-                <div id="name">My name is <img id="speaker" src="./Abhinendra Yadav_files/speakerLight.svg" onclick="play()"> Abhinendra
-                    Yadav</div>
-                <ul id="mainIcons">
+                <div id="greeting">Hello | <span id="greetings"></span></div>
+                <!-- <div id="name">My name is Abhinendra Yadav</div> -->
+                <!-- <ul id="mainIcons">
                     <li><a href="" target="_blank"><img src="./Abhinendra Yadav_files/resumeLight.svg"></a></li>
                     <li><a href="https://github.com/abhinendrayadav" target="_blank"><img src="./Abhinendra Yadav_files/githubLogoLight.svg"></a></li>
                     <li><a href="https://www.linkedin.com/in/abhinendrayadav" target="_blank"><img src="./Abhinendra Yadav_files/linkedinLogoLight.svg"></a></li>
                     <li><a href="mailto:abhinendra10@gmail.com" target="_top"><img src="./Abhinendra Yadav_files/emailLight.svg"></a></li>
-                </ul>
+                </ul> -->
             </div>
 
-            <div id="discordWidget">
+            <!-- <div id="discordWidget">
                     <iframe src="https://discordapp.com/widget?id=539685842005000226&theme=dark" width="250" height="350" allowtransparency="true" frameborder="0"></iframe>
-                   
-                  <!--  <iframe src="https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF" width="250" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
+
+
+            </div> -->
+
+            <div id = "whatsapp">
+                <label for="number">Enter Number</label>
+                
+                <input type="tel" id="phoneNumber" value="+91" placeholder="Phone number">
+                <br>
+                <br>
+                <input id = "sendButton" type="submit" value="Send Message" onclick="sendMessage()">
+
+
             </div>
             
             <div id ="timeClock">
@@ -76,26 +81,31 @@
                     I'm a <span id="age"></span>-year-old, India-born, kludgey nerd with entrepreneurial aspirations.
                 </p>
                 <p>
-                    I'm a <span class="important">Software Engineer at Prolifics</span>, where I work on RPA and middleware tools of
-                    <a href="" target="_blank">IBM</a>
-                    like
-                    <a href="" target="_blank">IID</a>, <a href="" target="_blank">ODM</a> and <a href="" target="_blank">BPM</a>
-                    .
+                    I'm a <span class="important">Software Engineer. </span>
                 </p>
                 <p>
-                    I'm also the <span class="important">founder of
-                        <a href="https://greedygeekx.wordpress.com" target="_blank">GreedyGeekX</a></span>, a blog that talks about tech. <br>
                         Aur mai udega.
-                        
                 </p>
             </div>
             <h3 id="copyright">Copyright © Abhinendra Yadav</h3>
-        </div>
+        <!-- </div> -->
         
         <!-- scripts -->
         <script src="./Abhinendra Yadav_files/particles.js.download"></script>
         <script src="./Abhinendra Yadav_files/app.js.download"></script>
         <script src="./Abhinendra Yadav_files/main.js.download"></script>
+        <script>
+            function sendMessage(){
+                const baseUrl = 'https://api.whatsapp.com/send/?phone=';
+                var number = document.getElementById('phoneNumber').value;
+                const suffix = '&text&app_absent=0';
+                var plus = number.replaceAll('+', '%2B');
+                var fullUrl = baseUrl + number + suffix;
+                parent.open(fullUrl.replaceAll(' ', ''));
+
+            }
+
+        </script>
         <script>
             window.onload = () => {
                 document.getElementById('copyright').innerText += ` ${new Date().getFullYear()}`;
@@ -161,7 +171,7 @@
             function displayGreetings(){
                 var hour = new Date().getHours();
                 var greet;
-                if(hour>1 && hour<5) greet =  "it's too late sleep now";
+                if(hour>1 && hour<5) greet =  "It's too late; sleep now";
                 else if(hour>=5 && hour<12) greet =  "Good Morning";
                 else if(hour>=12 && hour<16) greet =  "Good Afternoon";
                 else  greet =  "Good Evening";
@@ -169,61 +179,10 @@
                document.getElementById('greetings').innerHTML = greet;
             }
         </script>
-    
-    
+
         <img style="width:0;height:0;display:none;visibility:hidden;" src="./Abhinendra Yadav_files/saved_resource"><img style="width:0;height:0;display:none;visibility:hidden;"
          src="./Abhinendra Yadav_files/saved_resource(1)"><img style="width:0;height:0;display:none;visibility:hidden;" src="./Abhinendra Yadav_files/saved_resource(2)">
-         
-         <div class="container">
-            <!--chatbot widget -->
-             <div class="widget">
-                <div class="chat_header">
-    
-                   <!-- <span class="chatbot_icon" id="chatbot_icon"><img class="imgProfile" src="static/img/prova.png"/></span> -->
-                    <!--Add the name of the bot here -->
-                   <span class="chat_header_title">ProVA</span>
-                   <span class="minimize-trigger" href='#'><i class="material-icons" id="minimize_tab">minimize</i></span>
-                   <!-- <span class="dropdown-trigger" href='#' data-target='dropdown1'>
-                      <i class="material-icons">
-                            more_vert
-                      </i>
-                   </span> -->
-    
-                   <!-- Dropdown menu-->
-                   <ul id='dropdown1' class='dropdown-content'>
-                      <li><a href="#" id="clear">Clear</a></li>
-                      <li><a href="#" id="restart">Restart</a></li>
-                      <li><a href="#" id="close" >Close</a></li>
-                   </ul>
-                </div>
-    
-                <!--Chatbot contents goes here -->
-                <div class="chats" id="chats">
-                   <div class="clearfix"></div>
-                </div>
-                
-                <!--keypad for user to type the message -->
-                <div class="keypad">
-                   <textarea id="userInput" placeholder="Type a message..." class="usrInput"></textarea>
-                   <div id="sendButton"><i class="fa fa-paper-plane" aria-hidden="true"></i></div>
-                </div>
-             </div>
-    
-             <!--bot profile-->
-             <div class="profile_div" id="profile_div">
-                <img class="imgProfile" src="static/img/prova.png" />
-             </div>
-          </div>
-    
-          <!--JavaScript at end of body for optimized loading-->
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-          <script type="text/javascript" src="static/js/materialize.min.js"></script>
-    
-          <!--Main Script -->
-          <script type="text/javascript" src="static/js/script.js"></script>
-    
-          <!--Chart.js Script -->
-          <script type="text/javascript" src="static/js/chart.min.js"></script>
+
         </body>
     <screen-shader
      style="display: block; transition: none 0s ease 0s; margin: 0px; padding: 0px; border-radius: 0px; border: none; outline: none; visibility: visible; max-height: none; max-width: none; clip: unset; overflow: visible; opacity: 1;">
